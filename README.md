@@ -38,7 +38,8 @@ Manipulate data. Split code into modules. Reflect on end result
 
 [Slides](https://drive.google.com/open?id=1BSzGYNLMgtHD4HRnK7f0DgyTv4Pg3xsQwD_eYNo7v0Y)
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+Github pages:
+https://timterwijn.github.io/web-app-from-scratch-1920/
 
 <!-- ☝️ replace this description with a description of your own work -->
 
