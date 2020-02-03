@@ -6,23 +6,15 @@ var app = {
         var monsters;
 
         //check if there is data in the local storage    
-        if(app.localStorageHasData()){
+        if(myLocalStorage.hasData()){
             //load data from local storage
-            monsters = app.getDataFromLocalStorage();
+            monsters = myLocalStorage.getMonsters();
         }else{
             //get data from api
             var data = app.getDataFromApi();
         }
 
         return monsters
-    },
-
-    localStorageHasData : function(){
-        return false; //todo
-    },
-
-    getDataFromLocalStorage : function(){
-        return "data" //todo
     },
 
     getDataFromApi : function(){
@@ -60,16 +52,12 @@ var app = {
         app.showMonsters(monsters);
 
         //save monsters to local storage
-        app.saveMonstersToLocalStorage(monsters);
+        myLocalStorage.saveMonsters(monsters);
     },
 
     showMonsters : function(monsters){
         console.log(monsters)
         document.getElementById("screen").innerHTML = monsters;
-    },
-
-    saveMonstersToLocalStorage : function(monsters){
-        //todo
     },
 
     filterData : function (data){
