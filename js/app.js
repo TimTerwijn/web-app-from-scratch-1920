@@ -23,7 +23,7 @@ class App {
     } 
 
     showMonsters(monsters){
-        document.getElementById("screen").innerHTML = monsters;
+        document.getElementById("screen").innerHTML = monsters.get("Typhor").getName();
     }
 }
 

@@ -1,38 +1,23 @@
 export class Monster{
     constructor(   
-        name, 
-        attackLevel, 
-        strengthLevel, 
-        defenceLevel,
-        magicLevel, 
-        rangedLevel, 
-        attackStab, 
-        attackSlash, 
-        attackCrush, 
-        attackMagic, 
-        attackRanged, 
-        defenceStab,
-        defenceSlash,
-        defenceCrush,
-        defenceMagic,
-        defenceRanged
+        monsterJSON
     ){
-        this._name = name;
-        this._attackLevel = attackLevel;
-        this._strengthLevel = strengthLevel;
-        this._defenceLevel = defenceLevel;
-        this._magicLevel = magicLevel;
-        this._rangedLevel = rangedLevel;
-        this._attackStab = attackStab;
-        this._attackSlash = attackSlash;
-        this._attackCrush = attackCrush;
-        this._attackMagic = attackMagic;
-        this._attackRanged = attackRanged;
-        this._defenceStab = defenceStab;
-        this._defenceSlash = defenceSlash;
-        this._defenceCrush = defenceCrush;
-        this._defenceMagic = defenceMagic;
-        this._defenceRanged = defenceRanged;
+        this._name = monsterJSON.name;
+        this._attackLevel = monsterJSON.attack_level;
+        this._strengthLevel = monsterJSON.strength_level;
+        this._defenceLevel = monsterJSON.defence_level;
+        this._magicLevel = monsterJSON.magic_level;
+        this._rangedLevel = monsterJSON.ranged_level;
+        this._attackStab = monsterJSON.attack_stab;
+        this._attackSlash = monsterJSON.attack_slash;
+        this._attackCrush = monsterJSON.attack_crush;
+        this._attackMagic = monsterJSON.attack_magic;
+        this._attackRanged = monsterJSON.attack_ranged;
+        this._defenceStab = monsterJSON.defence_stab;
+        this._defenceSlash = monsterJSON.defence_slash;
+        this._defenceCrush = monsterJSON.defence_crush;
+        this._defenceMagic = monsterJSON.defence_magic;
+        this._defenceRanged = monsterJSON.defence_ranged;
     }
 
     setName(_name) { this._name = _name; }
