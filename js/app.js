@@ -23,7 +23,6 @@ class App {
     } 
 
     showMonsters(monsters){
-        console.log(monsters)
         document.getElementById("screen").innerHTML = monsters;
     }
 }

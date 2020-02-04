@@ -1,3 +1,5 @@
+import {MonsterMap} from "./MonsterMap.js";
+
 export class Api {
 
     constructor(app){
@@ -9,18 +11,18 @@ export class Api {
         var apiUrl = "https://www.osrsbox.com/osrsbox-db/monsters-complete.json";
         var api = this;
         
-        this.getJSON(apiUrl, function(err, data) {
+        this.getJSON(apiUrl, function(err, json) {
             if (err !== null) {
                 alert('Something went wrong: ' + err);
             } else {
-                api.useData(data[1].name);
+                api.useData(json);
             }
         });
     }  
     
-    useData(data){
+    useData(json){
         //filter data
-        var monsters = this.filterData(data);
+        var monsters = this.filterData(json);
 
         //show monsters
         this.app.showMonsters(monsters);
@@ -29,11 +31,12 @@ export class Api {
         this.myLocalStorage.saveMonsters(monsters);
     }
 
-    filterData(data){
+    filterData(json){
         //make array of monsters, each monster must have his name as a primary key to find it in the array.
         //also the monster class uses only the nesecairy data to increase speed.
 
-        var monsters = data; //todo
+        var monsters = new MonsterMap(json)
+
         return monsters;
     }
 
