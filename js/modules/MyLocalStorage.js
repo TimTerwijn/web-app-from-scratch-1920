@@ -1,14 +1,22 @@
+import {MonsterMap} from "./MonsterMap.js"
+
 export class MyLocalStorage{
 
+    _MONSTERS = "monsters";
+
     hasData(){
-        return false; //todo
+        return false//this.getMonsters().length !== null;
     }
 
     getMonsters(){
-        return "data" //todo
+        var json = localStorage.getItem(this._MONSTERS);
+        var monsters = MonsterMap.fromJSON(json);
+    
+        return monsters;
     }
 
     saveMonsters(monsters){
-        //todo
+        var json = JSON.stringify(monsters);
+        localStorage.setItem(this._MONSTERS, json);
     }
 }

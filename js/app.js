@@ -23,7 +23,7 @@ class App {
     } 
 
     showMonsters(monsters){
-        document.getElementById("screen").innerHTML = monsters.get("Typhor").getName();
+        document.getElementById("screen").innerHTML = monsters.get("Typhor").getName();//show 9296th item to show speed
     }
 }
 

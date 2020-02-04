@@ -19,4 +19,13 @@ export class MonsterMap{
     get(name){//name = String
         return this._array[name];
     }
+
+    getAllMonsters(){
+        return this._array;
+    }
+
+    static fromJSON(json) {
+        var _json = JSON.parse(json);
+        return Object.assign(new MonsterMap(), _json);
+    }
 }
