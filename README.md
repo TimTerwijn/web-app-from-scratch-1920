@@ -11,8 +11,8 @@ I want to make a Runescape application where you fill in your stats and gear bon
 <!-- How about a section that describes how to install this project? 🤓 -->
 Download the zip and execute index.html
 
-<b>What are the features<b> 🤔
-<p>For now, press F5 and see a name of a monster.<p>
+<b>What are the features<b> 🤔<br>
+For now, press F5 and see a name of a monster.
 
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
 
