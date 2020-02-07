@@ -12,7 +12,7 @@ I want to make a Runescape application where you fill in your stats and gear bon
 Download the zip and execute index.html
 
 <b>What are the features<b> 🤔
-For now, press F5 and see a name of a monster.
+<p>For now, press F5 and see a name of a monster.<p>
 
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
 
