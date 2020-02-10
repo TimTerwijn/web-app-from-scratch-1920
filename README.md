@@ -1,21 +1,35 @@
-Github pages:
+# Runescape calculator
+
+## Github pages:
 https://timterwijn.github.io/web-app-from-scratch-1920/
 
-<!-- ☝️ replace this description with a description of your own work -->
+## Description
 I want to make a Runescape application where you fill in your stats and gear bonuses, then you can search for a monster, powered by the osrsbox.com API, and calculate your hit and evade chance in percentages.
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+## Logo
+![Logo](/img/logo.jpg)
 
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-Download the zip and execute index.html
-
-<b>What are the features</b> 🤔<br>
-For now, press F5 and see a name of a monster.
+## Table of contents
+* What API did I use
+* How to use
+* What are the features
+* What features do I want to add
+* License
 
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
+## What API did I use
+I made use of **Osrsbox.com**.
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
+## How to use
+Download the zip and execute index.html
+
+## What features do I want to add
+* ~~Show monster name from the osrsbox.com api~~
+* Enter own stats.
+* Search for a monster.
+* Calculate monster and player accuracies.
+* See monster stats on a other page when monster is pressed.
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+## license
+...
