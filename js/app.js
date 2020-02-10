@@ -1,30 +1,46 @@
+import {Renderer} from "./modules/Renderer.js";
 import {MyLocalStorage} from "./modules/MyLocalStorage.js";
 import {Api} from "./modules/Api.js";
 
 class App { 
+    monsters;//todo: kan dit weg?
     
-    myLocalStorage = new MyLocalStorage();
-    api = new Api(this);
+    constructor(){
+        //vars
+        this.renderer = new Renderer(this);
+        this.myLocalStorage = new MyLocalStorage();
+        this.api = new Api(this);
+        
+        //init
+        this.init();
+    }
 
-    loadData(){
-        //define variable
-        var monsters;
+    init(){        
+        //show loading screen
+        this.renderer.renderLoadingScreen();
 
         //check if there is data in the local storage    
-        if(this.myLocalStorage.hasData()){
+        if(this.myLocalStorage.hasMonsters()){
             //load data from local storage
-            monsters = this.myLocalStorage.getMonsters();
+            monsters = this.myLocalStorage.get();
         }else{
             //get data from api
-            monsters = this.api.getDataFromApi();
+            this.api.get();
         }
+        
+    }
 
-        return monsters
-    } 
+    searchMonster(monsterName){
+        alert(monsterName)
+    }
 
-    showMonsters(monsters){
-        document.getElementById("screen").innerHTML = monsters.get("Typhor").getName();//show 9296th item to show speed
+    setMonsters(monsters){//monsterMap object
+        this.monsters = monsters;
+    }
+
+    hasMonsters(){
+        this.monsters.length !== null;
     }
 }
 
-new App().loadData();
+new App();

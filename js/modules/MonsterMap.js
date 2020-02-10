@@ -1,11 +1,12 @@
 import {Monster} from "../models/Monster.js"
 
+//Array of monsters searchable by name (Super Fast!)
 export class MonsterMap{
     
     constructor(json){
         this._array = new Array();
 
-        for (var monsterId of Object.keys(json)){
+        for (var monsterId of Object.keys(json)){//todo: remove bs monsters
             var monster = new Monster(json[monsterId]);
             this.add(monster);
         } 
@@ -20,7 +21,7 @@ export class MonsterMap{
         return this._array[name];
     }
 
-    getAllMonsters(){
+    getAll(){
         return this._array;
     }
 
