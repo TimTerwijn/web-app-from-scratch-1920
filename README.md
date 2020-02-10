@@ -10,18 +10,24 @@ I want to make a Runescape application where you fill in your stats and gear bon
 ![Logo](/img/logo.jpg)
 
 ## Table of contents
+* Diagrams
 * What API did I use
 * How to use
 * What are the features
 * What features do I want to add
 * License
 
+## Diagrams
+[ActorDiagram](https://github.com/TimTerwijn/web-app-from-scratch-1920/blob/master/img/ActorDiagram.PNG)
+
+[InteractionDiagram](https://github.com/TimTerwijn/web-app-from-scratch-1920/blob/master/img/InteractionDiagram.PNG)
+
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
 ## What API did I use
 I made use of **Osrsbox.com**.
 
 ## How to use
-Download the zip and execute index.html
+Download the zip, install live server plugin and open index.html with live server.
 
 ## What features do I want to add
 * ~~Show monster name from the osrsbox.com api~~
