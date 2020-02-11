@@ -6,27 +6,34 @@ export class MonsterMap{
     constructor(json){
         this._array = new Array();
 
-        for (var monsterId of Object.keys(json)){//todo: remove bs monsters
-            var monster = new Monster(json[monsterId]);
+        for (const monsterId of Object.keys(json)){//todo: remove bs monsters
+            const monster = new Monster(json[monsterId]);
             this.add(monster);
         } 
     }
 
+    //add a monster
     add(monster){//monster = Monster object
-        var name = monster.getName();
+        const name = monster.getName();
         this._array[name] = monster;
     }
 
+    //get a monster
     get(name){//name = String
         return this._array[name];
     }
 
+    //get all monsters
     getAll(){
         return this._array;
     }
 
+    //todo: add 2 static constructors
+    //1 for creation by api
+    //1 for creation by localstorage
+
     static fromJSON(json) {
-        var _json = JSON.parse(json);
+        const _json = JSON.parse(json);
         return Object.assign(new MonsterMap(), _json);
     }
 }

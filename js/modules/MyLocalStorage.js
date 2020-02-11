@@ -2,21 +2,24 @@ import {MonsterMap} from "./MonsterMap.js"
 
 export class MyLocalStorage{
 
-    _MONSTERS = "monsters";
+    static _MONSTERS = "monsters";
 
-    hasMonsters(){
-        return false//this.getMonsters().length !== null;
+    //checks if localstorage has monsters
+    hasMonsters(){//false because local storage is not working yet
+        return false//this.getMonsters() !== undefined;
     }
 
+    //get monsters from local storage
     get(){
-        var json = localStorage.getItem(this._MONSTERS);
-        var monsters = MonsterMap.fromJSON(json);
+        const json = localStorage.getItem(MyLocalStorage._MONSTERS);
+        const monsters = MonsterMap.fromJSON(json);
     
         return monsters;
     }
 
+    //add monsters to local storage
     add(monsters){
-        var json = JSON.stringify(monsters);
-        localStorage.setItem(this._MONSTERS, json);
+        const json = JSON.stringify(monsters);
+        localStorage.setItem(MyLocalStorage._MONSTERS, json);
     }
 }
