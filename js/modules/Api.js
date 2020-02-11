@@ -5,7 +5,7 @@ export class Api {
     constructor(app){
         this.app = app
         this.myLocalStorage = app.myLocalStorage;
-        this.renderer = app.renderer;
+        this.render = app.render;
     }
 
     //get monster json from api
@@ -16,7 +16,7 @@ export class Api {
         //inspired by https://stackoverflow.com/a/35970894
         api._getJSON(apiUrl, function(err, json) {
             if (err !== null) {
-                api.app.renderError();
+                api.app.error();
             } else {//succes
                 api._onSucces(json);
             }
@@ -34,8 +34,8 @@ export class Api {
         //save monsters to be able to search
         this.app.setMonsters(monsters);
 
-        //get data from api
-        this.renderer.renderApp();
+        //show user the detail page
+        routie('overview');
     }
 
     

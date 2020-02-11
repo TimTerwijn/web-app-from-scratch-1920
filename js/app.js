@@ -1,15 +1,18 @@
-import {Renderer} from "./modules/Renderer.js";
+import {Render} from "./modules/Render.js";
 import {MyLocalStorage} from "./modules/MyLocalStorage.js";
 import {Api} from "./modules/Api.js";
+import {Router} from "./modules/Router.js";
+import {Routie} from "./modules/Routie.js";
 
 class App { 
     monsters;//type of MonsterMap class //todo: kan dit weg?
     
     constructor(){
         //vars
-        this.renderer = new Renderer(this);
+        this.render = new Render(this);
         this.myLocalStorage = new MyLocalStorage();
         this.api = new Api(this);
+        this.router = new Router(this.render);
         
         //init
         this.init();
@@ -17,16 +20,13 @@ class App {
 
     //after page load
     init(){        
-        //show loading screen
-        this.renderer.renderLoadingScreen();
-
         //check if there is data in the local storage    
         if(this.myLocalStorage.hasMonsters()){
             //load data from local storage
             this.monsters = this.myLocalStorage.get();
             
             //show app to the user
-            this.renderer.renderApp();
+            this.render.renderApp();
         }else{
             //get data from api
             this.api.get();
@@ -44,7 +44,7 @@ class App {
         monsterName = this.capitalizeString(monsterName);
         const monster = this.monsters.get(monsterName);
         
-        this.renderer.renderResult(monster)
+        this.render.renderResult(monster)
     }
 
     //set monsters you use to search monsters
@@ -64,4 +64,19 @@ class App {
     }
 }
 
-new App();
+const app = new App();
+
+routie({//todo add to router.js
+    //default page, also loadscreen
+    "":() => {
+        app.router.loadingScreen();
+    },
+    //overview page
+    overview:() => {
+        app.router.overview();
+    },
+    //monster page
+    details: () => {
+        app.router.details();
+    }
+});
