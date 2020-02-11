@@ -26,13 +26,13 @@ export class Api {
     //do things with the json
     _onSucces(json){
         //filter data
-        const monsters = new MonsterMap(json)
+        const monsters = new MonsterMap(json);
 
         //save monsters to local storage
         this.myLocalStorage.add(monsters);
 
         //save monsters to be able to search
-        this.app.setMonsters(monsters)
+        this.app.setMonsters(monsters);
 
         //get data from api
         this.renderer.renderApp();

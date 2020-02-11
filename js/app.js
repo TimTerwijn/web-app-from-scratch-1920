@@ -30,6 +30,8 @@ class App {
         }else{
             //get data from api
             this.api.get();
+
+            //todo: use promise
         }
     }
 
@@ -40,10 +42,9 @@ class App {
         }
 
         monsterName = this.capitalizeString(monsterName);
-        const monster = this.monsters.get(monsterName)
+        const monster = this.monsters.get(monsterName);
         
-        console.log(monster)
-        alert(this.hasMonsters())
+        this.renderer.renderResult(monster)
     }
 
     //set monsters you use to search monsters
