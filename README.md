@@ -29,12 +29,17 @@ I made use of **Osrsbox.com**.
 ## How to use
 Download the zip, install live server plugin and open index.html with live server.
 
-## What features do I want to add
-* ~~Show monster name from the osrsbox.com api~~
+## Roadmap
+* ~~Search for a monster from the osrsbox.com api.~~
+* Visit monster detail page with routes and states.
+* Improve code with promises.
+* Add map, filter and reduce functions.
+* Make use of a Template engine.
+* Improve MonsterMap algorithm.
+* Add local storage support.
 * Enter own stats.
-* Search for a monster.
 * Calculate monster and player accuracies.
-* See monster stats on a other page when monster is pressed.
+
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
 ## license
