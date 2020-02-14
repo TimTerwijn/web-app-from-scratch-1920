@@ -38,14 +38,23 @@ class App {
 
     //search button has been clicked
     onSearchMonster(monsterName){
+        //check if monster map is filled
         if(!this.hasMonsters){
             this.monsters = this.myLocalStorage.get();
         }
-
+        
+        //search monster in map
         monsterName = this.capitalizeString(monsterName);
         const monster = this.monsters.get(monsterName);
-        
-        this.render.renderResult(monster)
+
+        //check if a monster has been found
+        if(monster !== undefined){
+            //render result        
+            this.render.searchResult(monster)
+        }else{
+            //render error
+            this.render.error("No monster found, please try again")
+        }        
     }
 
     //set monsters you use to search monsters

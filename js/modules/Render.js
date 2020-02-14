@@ -35,18 +35,23 @@ export class Render{
         this._toggleVisibility(this._overview);
     }
 
-    renderResult(monster){
-        let string = "No monster found, please try again";
-        if(monster !== undefined){
-            string = monster.getName();
-        }
-        this._insertText(this._result, string);
-    }
-
+    //after you clicked a monster show this screen
     details(){
         this._toggleVisibility(this._overview);
         this._toggleVisibility(this._detailPage);
     }
+
+    //after searching a monster show this screen
+    searchResult(monster){
+        this._insertText(this._result, monster.getName());
+    }
+
+    //if an error has occured show this
+    error(message){
+        this._insertText(this._result, message);
+    }    
+
+    //Private Methods
 
     _toggleVisibility(element){
         element.classList.toggle("hidden");
