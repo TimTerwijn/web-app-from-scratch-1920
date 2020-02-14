@@ -20,6 +20,45 @@ export class Monster{
         this._defenceRanged = monsterJSON.defence_ranged;
     }
 
+    printStats(){
+        return {
+            name:           this.getName(),
+            health:         0,
+            attackLevel:    this.getAttackLevel(),
+            strengthLevel:  this.getStrengthLevel(),
+            defenceLevel:   this.getDefenceLevel(),
+            magicLevel:     this.getMagicLevel(),
+            rangedLevel:    this.getRangedLevel(),
+            attackBonus:    this._getAttackBonus(),
+            strenghtBonus:  0,
+            magicBonus:     this.getAttackMagic(),
+            magicStrenght:  0,
+            rangedBonus:    this.getAttackRanged(),
+            rangedStrenght: 0,
+            defenceStab:    this.getDefenceStab(),
+            defenceSlash:   this.getDefenceSlash(),
+            defenceCrush:   this.getDefenceCrush(),
+            defenceMagic:   this.getDefenceMagic(),
+            defenceRanged:  this.getDefenceRanged(),
+        };
+    }
+
+    _getAttackBonus(){
+        let attack = this.getAttackStab();
+        const attackSlash = this.getAttackSlash();
+        const attackCrush = this.getAttackCrush();
+
+        if(attack < attackSlash){
+            attack = attackSlash;
+        }
+
+        if(attack < attackCrush){
+            attack = attackCrush;
+        }
+
+        return attack;        
+    }
+
     setName(_name) { this._name = _name; }
     getName() { return this._name; } 
     setAttackLevel(_attackLevel,) { this._attackLevel = _attackLevel; } 

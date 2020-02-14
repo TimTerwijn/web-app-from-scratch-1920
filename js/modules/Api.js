@@ -34,7 +34,7 @@ export class Api {
         //save monsters to be able to search
         this.app.setMonsters(monsters);
 
-        //show user the detail page
+        //switch to detail page
         routie('overview');
     }
 
