@@ -20,16 +20,16 @@
         <input id="monster_name" type="text">
         <button id="submit">Search</button>
       </div>
-      <a href="#details" id="result">
+      <div id="result">
         
-      </a>
+      </div>
     </div>
 
     <div id="detail_page" class="hidden">
       <!--Layout inspired by https://oldschool.runescape.wiki/w/Green_dragon-->
-      <div class="grid">
+      <div id="monster_grid" class="grid">
         <!-- section element inspired by Max -->
-        <section><img src="img/combat.png"> Combat stats</section>
+        <div><img src="img/combat.png"> Combat stats</div>
         <!--row-->
         <img src="img/hp.png">
         <img src="img/attack.png">
@@ -38,14 +38,14 @@
         <img src="img/magic.png">
         <img src="img/ranged.png">
         <!--row-->
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <section data-bind="health"></section>
+        <section data-bind="attackLevel"></section>
+        <section data-bind="strengthLevel"></section>
+        <section data-bind="defenceLevel"></section>
+        <section data-bind="magicLevel"></section>
+        <section data-bind="rangedLevel"></section>  
         <!--row-->
-        <section><img src="img/attack.png"> Aggressive stats</section>
+        <div><img src="img/attack.png"> Aggressive stats</div>
         <!--row-->
         <img src="img/attack.png">
         <img src="img/strenght.png">
@@ -54,14 +54,14 @@
         <img src="img/ranged.png">
         <img src="img/ranged_strength.png">
         <!--row-->
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <section data-bind="attackBonus"></section>
+        <section data-bind="strenghtBonus"></section>
+        <section data-bind="magicBonus"></section>
+        <section data-bind="magicStrenght"></section>
+        <section data-bind="rangedBonus"></section>
+        <section data-bind="rangedStrenght"></section> 
         <!-- section element inspired by Max -->
-        <section><img src="img/defence.png"> Defensive stats</section>
+        <div><img src="img/defence.png"> Defensive stats</div>
         <!--row-->
         <img src="img/stab.png">
         <img src="img/slash.png">
@@ -70,12 +70,12 @@
         <img src="img/ranged.png">
         <img>
         <!--row-->
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <section data-bind="defenceStab"></section>
+        <section data-bind="defenceSlash"></section>
+        <section data-bind="defenceCrush"></section>
+        <section data-bind="defenceMagic"></section>
+        <section data-bind="defenceRanged"></section>
+        <section data-bind="">WIP</section> 
       </div>      
     </div>
 

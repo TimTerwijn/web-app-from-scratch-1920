@@ -56,7 +56,7 @@ class App {
             this.render.error("No monster found, please try again")
         }        
     }
-
+    
     //set monsters you use to search monsters
     setMonsters(monsters){//monsterMap object
         this.monsters = monsters;

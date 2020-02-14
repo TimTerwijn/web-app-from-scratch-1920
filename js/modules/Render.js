@@ -14,6 +14,11 @@ export class Render{
         this._submitButton = document.getElementById("submit");
         this._result = document.getElementById("result");
 
+        this._monsterGrid = document.getElementById("monster_grid");
+        this._gridCombatStats = document.getElementById("grid_combat_stats");
+        this._gridAggressiveStats = document.getElementById("grid_aggressive_stats");
+        this._gridDefensiveStats = document.getElementById("grid_defensive_stats");
+
         const render = this;
         this._submitButton.onclick = function(){
             render.app.onSearchMonster(render._monsterName.value);
@@ -21,6 +26,10 @@ export class Render{
 
         this._monsterName.onkeyup = function(){
             render.app.onSearchMonster(render._monsterName.value);
+        };
+
+        this._result.onclick = function(){
+            render._onMonsterClick();
         };
     }
 
@@ -49,9 +58,28 @@ export class Render{
     //if an error has occured show this
     error(message){
         this._insertText(this._result, message);
-    }    
+    }
+
 
     //Private Methods
+
+    //when a user presses a monster
+    _onMonsterClick(){
+        //get clicked monster
+        const name = this._result.innerText;
+
+        //find monster
+        const monster = this.app.monsters.get(name);
+
+        //get monster stats
+        const stats = monster.printStats();
+
+        //fill details page
+        Transparency.render(this._monsterGrid, stats);
+
+        //switch to details page
+        routie('details');
+    }
 
     _toggleVisibility(element){
         element.classList.toggle("hidden");
