@@ -32,7 +32,7 @@ Download the zip, install live server plugin and open index.html with live serve
 ## Roadmap
 * ~~Search for a monster from the osrsbox.com api.~~
 * ~~Visit monster detail page with routes and states.~~
-* Improve code with promises.
+* ~~Improve code with promises.~~
 * Add map, filter and reduce functions.
 * ~~Make use of a Template engine.~~
 * Improve MonsterMap algorithm.
