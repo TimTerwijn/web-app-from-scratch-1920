@@ -3,6 +3,7 @@ import {MyLocalStorage} from "./modules/MyLocalStorage.js";
 import {Api} from "./modules/Api.js";
 import {Router} from "./modules/Router.js";
 import {Routie} from "./modules/Routie.js";
+import {MonsterMap} from "./modules/MonsterMap.js";
 
 
 class App { 
@@ -30,9 +31,22 @@ class App {
             this.render.renderApp();
         }else{
             //get data from api
-            this.api.get();
+            const promise = this.api.get();
+            
+            //do things with the json
+            promise.then((json) => {
+                //filter data
+                const monsters = new MonsterMap(json);
 
-            //todo: use promise
+                //save monsters to local storage
+                this.myLocalStorage.add(monsters);
+
+                //save monsters to be able to search
+                this.setMonsters(monsters);
+
+                //switch to detail page
+                routie('overview');
+            });
         }
     }
 
