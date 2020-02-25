@@ -1,4 +1,3 @@
-import {Render} from "./Render.js";
 import {Routie} from "./Routie.js";
 
 export class Router{
@@ -9,30 +8,18 @@ export class Router{
 
             //default page, also loadscreen
             "":() => {
-                this.loadingScreen();
+                this.render.loadingScreen();
             },
             //overview page
             overview:() => {
-                this.overview();
+                this.render.overview();
             },
             //monster page
             details: () => {
-                this.details();
+                this.render.details();
             }
         });
     }
-
-    loadingScreen(){
-        this.render.loadingScreen();
-    }
-
-    overview(){
-        this.render.overview();
-    }
-
-    details(){
-        this.render.details();
-    }    
 }
 
 

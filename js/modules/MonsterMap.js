@@ -52,8 +52,10 @@ export class MonsterMap{
     }
 
     //get a monster
-    get(name){//name = String
-        return this._array[name];
+    get(monsterName){//name = String
+        //capatitalize name
+        const captMonsterName = this._capatalizeString(monsterName);
+        return this._array[captMonsterName];
     }
 
     //get all monsters
@@ -64,6 +66,12 @@ export class MonsterMap{
     //set all monsters
     _setAll(array){
         this._array = array;
+    }
+
+    //inspired by https://joshtronic.com/2016/02/14/how-to-capitalize-the-first-letter-in-a-string-in-javascript/
+    //capatalize first letter of a string
+    _capatalizeString(string){
+        return string.charAt(0).toUpperCase() + string.substring(1);
     }
 
     //make json from array data

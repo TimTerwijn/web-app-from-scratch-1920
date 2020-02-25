@@ -1,45 +1,41 @@
-import {Ui} from "./Ui.js";
-
 export class Render{
-    constructor(myLocalStorage){
-        this.ui = new Ui(this, myLocalStorage);
-
-        this.setComponents();
-    }
-
-    //set all components
-    setComponents(){
-        this._loadingScreen = document.getElementById("loading_screen");
-        this._overview = document.getElementById("overview");
-        this._detailPage = document.getElementById("detail_page");
-
-        this._result = document.getElementById("result");
+    constructor(ui){
+        this.ui = ui
     }
 
     //first screen you see after opening the app
     loadingScreen(){//todo: better loading screen
-        this.ui.insertText(this._loadingScreen, "Loading, please wait...");
+        this._insertText(this.ui.loadingScreen, "Loading, please wait...");
     }
 
     //after api has loaded show this screen
     overview(){
-        this.ui.hide(this._loadingScreen);
-        this.ui.toggleVisibility(this._overview);
+        this._hide(this.ui.loadingScreen);
+        this._toggleVisibility(this.ui.overview);
     }
 
     //after you clicked a monster show this screen
     details(){
-        this.ui.toggleVisibility(this._overview);
-        this.ui.toggleVisibility(this._detailPage);
+        this._toggleVisibility(this.ui.overview);
+        this._toggleVisibility(this.ui.detailPage);
     }
 
-    //after searching a monster show this screen
-    searchResult(monster){
-        this.ui.insertText(this._result, monster.name);
+    result(string){
+        this._insertText(this.ui.result, string);
     }
 
-    //if an error has occured show this
-    error(message){
-        this.ui.insertText(this._result, message);
+    //PRIVATE METHODS
+
+    _toggleVisibility(element){
+        element.classList.toggle("hidden");
+    }
+
+    _hide(element){
+        element.className = "hidden";
+    }
+
+    _insertText(element, string){
+        element.innerHTML = string;
+        //todo: innerHTML is bad
     }
 }
