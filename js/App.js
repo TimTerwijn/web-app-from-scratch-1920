@@ -3,7 +3,7 @@ import {Api} from "./modules/Api.js";
 import {Ui} from "./modules/Ui.js";
 import {Router} from "./modules/Router.js";
 import {MonsterMap} from "./modules/MonsterMap.js";
-import {Routie} from "./modules/Routie.js";
+import {Routie} from "./libraries/Routie.js";
 
 class App { 
     constructor(){

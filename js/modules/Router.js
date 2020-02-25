@@ -1,4 +1,4 @@
-import {Routie} from "./Routie.js";
+import {Routie} from "../libraries/Routie.js";
 
 export class Router{
     constructor(render){
@@ -21,6 +21,3 @@ export class Router{
         });
     }
 }
-
-
-
