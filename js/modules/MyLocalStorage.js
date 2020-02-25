@@ -6,7 +6,8 @@ export class MyLocalStorage{
 
     //checks if localstorage has monsters
     hasMonsters(){//false because local storage is not working yet
-        return this.get() !== undefined;
+        const json = localStorage.getItem(this._MONSTERS);
+        return json !== undefined && json !== null;
     }
 
     //get monsters from local storage
