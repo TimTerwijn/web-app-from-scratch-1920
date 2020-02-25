@@ -11,6 +11,7 @@ I want to make a Runescape application where you fill in your stats and gear bon
 
 ## Table of contents
 * Diagrams
+* Map, Filter and Reduce example
 * What API did I use
 * How to use
 * What are the features
@@ -36,7 +37,7 @@ Download the zip, install live server plugin and open index.html with live serve
 * ~~Search for a monster from the osrsbox.com api.~~
 * ~~Visit monster detail page with routes and states.~~
 * ~~Improve code with promises.~~
-* Add map, filter and reduce functions.
+* ~~Add map, filter and reduce functions.~~
 * ~~Make use of a Template engine.~~
 * Improve MonsterMap algorithm.
 * ~~Add local storage support.~~
