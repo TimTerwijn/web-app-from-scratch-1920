@@ -22,6 +22,9 @@ I want to make a Runescape application where you fill in your stats and gear bon
 
 [InteractionDiagram](https://github.com/TimTerwijn/web-app-from-scratch-1920/blob/master/img/InteractionDiagram.PNG)
 
+## Map, Filter and Reduce example
+[Codepen Example](https://codepen.io/timterwijn/pen/QWbdYKW)
+
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
 ## What API did I use
 I made use of **Osrsbox.com**.
