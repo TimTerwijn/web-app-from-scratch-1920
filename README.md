@@ -36,7 +36,7 @@ Download the zip, install live server plugin and open index.html with live serve
 * Add map, filter and reduce functions.
 * ~~Make use of a Template engine.~~
 * Improve MonsterMap algorithm.
-* Add local storage support.
+* ~~Add local storage support.~~
 * Enter own stats.
 * Calculate monster and player accuracies.
 
