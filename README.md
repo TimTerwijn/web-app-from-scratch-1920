@@ -19,9 +19,8 @@ I want to make a Runescape application where you fill in your stats and gear bon
 * License
 
 ## Diagrams
-[ActorDiagram](https://github.com/TimTerwijn/web-app-from-scratch-1920/blob/master/img/ActorDiagram.PNG)
-
-[InteractionDiagram](https://github.com/TimTerwijn/web-app-from-scratch-1920/blob/master/img/InteractionDiagram.PNG)
+![ActorDiagram](/img/ActorDiagram.PNG)
+![InteractionDiagram](/img/InteractionDiagram.PNG)
 
 ## Map, Filter and Reduce example
 [Codepen Example](https://codepen.io/timterwijn/pen/QWbdYKW)
