@@ -31,6 +31,10 @@ export class Render{
         this._insertText(this.ui.result, string);
     }
 
+    stats(monster){
+        Transparency.render(this.ui.monsterGrid, monster);
+    }
+
     //PRIVATE METHODS
 
     _toggleVisibility(element){

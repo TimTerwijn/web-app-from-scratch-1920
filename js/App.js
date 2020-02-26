@@ -79,7 +79,7 @@ class App {
         const monster = monsters.get(monsterName);
 
         //fill details page
-        Transparency.render(this.ui.monsterGrid, monster);
+        this.ui.render.stats(monster);
 
         //switch to details page
         routie('details');
