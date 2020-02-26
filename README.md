@@ -20,7 +20,7 @@ I want to make a Runescape application where you fill in your stats and gear bon
 
 ## Diagrams
 ![ActorDiagram](/img/ActorDiagram.PNG)
-![InteractionDiagram](/img/InteractionDiagram.PNG
+![InteractionDiagram](/img/InteractionDiagram.PNG)
 
 ## Map, Filter and Reduce example
 [Codepen Example](https://codepen.io/timterwijn/pen/QWbdYKW)
