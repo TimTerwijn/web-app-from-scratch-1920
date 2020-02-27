@@ -30,6 +30,22 @@ I want to make a Runescape application where you fill in your stats and gear bon
 ## What API did I use
 I made use of **Osrsbox.com**.
 
+const monster = {
+  name: Cow,
+  attack_level: 1,
+  strength_level: 1,
+  defence_level: 1,
+  magic_level: 1,
+  ranged_level: 1,
+  attack_magic: 0,
+  attack_ranged: 0,
+  defence_stab: -21,
+  defence_slash: -21,
+  defence_crush: -21,
+  defence_magic: -21,
+  defence_ranged: -21,
+}
+
 ## How to use
 Download the zip, install live server plugin and open index.html with live server.
 
