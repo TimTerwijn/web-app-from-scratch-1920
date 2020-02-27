@@ -11,12 +11,11 @@ I want to make a Runescape application where you fill in your stats and gear bon
 
 ## Table of contents
 * [Diagrams](#diagrams)
-* Map, Filter and Reduce example
-* What API did I use
-* How to use
-* What are the features
-* What features do I want to add
-* License
+* [Map, Filter and Reduce example](#Map, Filter and Reduce example)
+* [What API did I use](#What API did I use)
+* [How to use](#How to use)
+* [Roadmap](#Roadmap)
+* [License](#License)
 
 ## Diagrams
 ### Actor Diagram
@@ -45,7 +44,6 @@ Download the zip, install live server plugin and open index.html with live serve
 * Enter own stats.
 * Calculate monster and player accuracies.
 
-
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
-## license
+## License
 ...
