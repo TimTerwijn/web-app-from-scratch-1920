@@ -45,7 +45,9 @@ defence_magic: -21,
 defence_ranged: -21,  
 
 ## How to use
-Download the zip, install live server plugin and open index.html with live server.
+Clone or download the repository $ git clone https://github.com/TimTerwijn/web-app-from-scratch-1920.git  
+Put code on a server.  
+go to index.html in your browses.  
 
 ## Roadmap
 * ~~Search for a monster from the osrsbox.com api.~~
