@@ -11,11 +11,11 @@ I want to make a Runescape application where you fill in your stats and gear bon
 
 ## Table of contents
 * [Diagrams](#diagrams)
-* [Map, Filter and Reduce example](#Map,-Filter-and-Reduce-example)
-* [What API did I use](#What-API-did-I-use)
-* [How to use](#How-to-use)
-* [Roadmap](#Roadmap)
-* [License](#License)
+* [Map, Filter and Reduce example](#map,-filter-and-reduce-example)
+* [What API did I use](#what-api-did-I-use)
+* [How to use](#how-to-use)
+* [Roadmap](#roadmap)
+* [License](#license)
 
 ## Diagrams
 ### Actor Diagram
