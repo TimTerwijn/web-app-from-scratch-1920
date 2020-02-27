@@ -62,7 +62,3 @@ Click on the result (cow) to see his stats.
 * ~~Add local storage support.~~
 * Enter own stats.
 * Calculate monster and player accuracies.
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
-## License
-...
