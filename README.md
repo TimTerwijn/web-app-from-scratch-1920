@@ -15,7 +15,6 @@ I want to make a Runescape application where you fill in your stats and gear bon
 * [What API did I use](#what-api-did-I-use)
 * [How to use](#how-to-use)
 * [Roadmap](#roadmap)
-* [License](#license)
 
 ## Diagrams
 ### Actor Diagram
