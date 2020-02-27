@@ -10,7 +10,7 @@ I want to make a Runescape application where you fill in your stats and gear bon
 ![Logo](/img/logo.jpg)
 
 ## Table of contents
-* Diagrams
+* [Diagrams](#diagrams-)
 * Map, Filter and Reduce example
 * What API did I use
 * How to use
