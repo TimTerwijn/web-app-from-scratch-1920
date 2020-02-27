@@ -47,7 +47,10 @@ defence_ranged: -21,
 ## How to use
 Clone or download the repository $ git clone https://github.com/TimTerwijn/web-app-from-scratch-1920.git  
 Put code on a server.  
-go to index.html in your browses.  
+Go to index.html in your browses.  
+App will download the data from the API.  
+Enter a monster name like: "cow".  
+Click on the result (cow) to see his stats.  
 
 ## Roadmap
 * ~~Search for a monster from the osrsbox.com api.~~
