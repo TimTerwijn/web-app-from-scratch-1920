@@ -12,7 +12,9 @@ export class Render{
     //first screen you see after opening the app
     loadingScreen(){//todo: better loading screen
         this._hideAll();
-        this._insertText(this.ui.loadingScreen, "Loading, please wait...");
+
+        //inspired by Max
+        this.ui.loadingScreen.innerText = "Loading, please wait...";
     }
 
     //after api has loaded show this screen
@@ -27,8 +29,9 @@ export class Render{
         this._toggleVisibility(this.ui.detailPage);
     }
 
-    result(string){
-        this._insertText(this.ui.result, string);
+    result(result){
+        //inspired by Max
+        this.ui.result.innerText = result;
     }
 
     stats(monster){
@@ -43,10 +46,5 @@ export class Render{
 
     _hide(element){
         element.className = "hidden";
-    }
-
-    _insertText(element, string){
-        element.innerHTML = string;
-        //todo: innerHTML is bad
     }
 }
