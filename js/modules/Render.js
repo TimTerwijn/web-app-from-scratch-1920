@@ -1,6 +1,7 @@
 export class Render{
     constructor(ui){
         this.ui = ui
+        this.loadingScreen()
     }
 
     _hideAll(){
@@ -12,6 +13,7 @@ export class Render{
     //first screen you see after opening the app
     loadingScreen(){//todo: better loading screen
         this._hideAll();
+        this._toggleVisibility(this.ui.loadingScreen);
 
         //inspired by Max
         this.ui.loadingScreen.innerText = "Loading, please wait...";
